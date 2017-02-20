@@ -1,0 +1,47 @@
+<div>
+<%= form_tag(action: 'search_ajax', remote: true, id: 'search_form') do %>
+	<%= text_field_tag 'course' %>
+	<%= text_field_tag 'teacher' %>
+	<%= submit_tag 'search' %>
+<% end %>
+	<input type="text" class="item">
+	<button type="button" class="btn">className</button>
+	<input type="text" class="item">
+	<button type="button" class="btn">teacherName</button>
+	<table class="result" id="classR">
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Credit</th>
+			<th>Period</th>
+			<th>Area</th>
+			<th>Teachers</th>
+			<th>Acadamy</th>
+			<th>Special</th>
+			<th>Term</th>
+		</tr>
+		<tr>
+			<td>10060040A</td>
+			<td>中级西班牙语(一)</td>
+			<td>8.0</td>
+			<td>10</td>
+			<td>仙林校区</td>
+			<td>谭薇, 张伟劼</td>
+			<td>外国语学院</td>
+			<td>西班牙语</td>
+			<td>a</td>
+		</tr>
+		<tr>
+			<td>10060040A</td>
+			<td>中级西班牙语(一)</td>
+			<td>8.0</td>
+			<td>10</td>
+			<td>仙林校区</td>
+			<td>谭薇, 张伟劼</td>
+			<td>外国语学院</td>
+			<td>西班牙语</td>
+			<td>a</td>
+		</tr>
+		<%= render partial: 'core/search_ajax' %>
+	</table>
+</div>
