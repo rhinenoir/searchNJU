@@ -11,8 +11,8 @@ class CoreController < ApplicationController
   	puts "called!"
   	@courses=Coursesmain.where("name LIKE ?", "%%#{params[:course]}%%")
   	respond_to do |format|
-  		format.html {render 'core/search_ajax'}
   		format.js {render 'core/search_ajax'}
+  		format.html {render 'core/search_ajax'}
   		format.json {render 'core/search_ajax'}
   	end
 

@@ -1,5 +1,5 @@
 <div>
-<%= form_tag(action: 'search_ajax', remote: true, id: 'search_form') do %>
+<%= form_tag('search_ajax', remote: true, id: 'search_form') do %>
 	<%= text_field_tag 'course' %>
 	<%= text_field_tag 'teacher' %>
 	<%= submit_tag 'search' %>
