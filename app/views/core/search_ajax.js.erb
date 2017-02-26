@@ -1,1 +1,4 @@
-$("#result1").html("<%= escape_javascript(render 'core/search_ajax') %>")
+$("#inputName").text("<%= @keyName %>")
+$("#inputTeachers").text("<%= @keyTeachers %>")
+$("#usual").html("<%= escape_javascript(render 'core/search_usual') %>")
+$("#other").html("<%= escape_javascript(render 'core/search_other') %>")

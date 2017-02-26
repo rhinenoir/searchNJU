@@ -3,19 +3,33 @@ class CoreController < ApplicationController
   end
 
   def search
-  	test="大"
-  	@courses=Coursesmain.where("name LIKE ?", "%%#{test}%%")
   end
 
   def search_ajax
-  	puts "called!"
-  	@courses=Coursesmain.where("name LIKE ?", "%%#{params[:course]}%%")
-  	respond_to do |format|
-  		format.js {render 'core/search_ajax'}
-  		format.html {render 'core/_search_ajax'}
-  		format.json {render 'core/search_ajax'}
+  	@keyName=params[:course]
+  	@keyTeachers=params[:teacher]
+  	if @keyName.length == 0
+  		@keyName="(None)"
+  		if @keyTeachers.length == 0
+  			@keyTeachers="(None)"
+  			@coursesUsual=[]
+  			@coursesOther=[]
+  		else
+  			@coursesUsual=Coursesmain.where("teacher LIKE ?", "%%#{@keyTeachers}%%")
+			@coursesOther=Coursesother.where("teacher LIKE ?", "%%#{@keyTeachers}%%")
+  		end
+  	else
+  		if @keyTeachers.length == 0
+  			@keyTeachers="(None)"
+  			@coursesUsual=Coursesmain.where("name LIKE ?", "%%#{@keyName}%%")
+			@coursesOther=Coursesother.where("name LIKE ?", "%%#{@keyName}%%")
+  		else	
+  			@coursesUsual=Coursesmain.where("name LIKE ? AND teacher LIKE ?", "%#{@keyName}%", "%#{@keyTeachers}%")
+			@coursesOther=Coursesother.where("name LIKE ? AND teacher LIKE ?", "%#{@keyName}%", "%#{@keyTeachers}%")
+  		end	
   	end
-
+  	respond_to do |format|
+  		format.js {}
+  	end
   end
-
 end

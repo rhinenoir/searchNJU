@@ -38,15 +38,16 @@ div {
 .result tr td {
 	font-family: "Microsoft YaHei","PMingLiu";
 	height: 30px;
+	max-width: 160px;
 }
 #search_area {
 	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-bottom: 18px;
 	color: white;
 	width: 720px;
 	margin: 0 auto;
 }
-label {
+#search_area label {
 	padding-right: 4px;
 	font-size: 14px;
 }
@@ -92,15 +93,40 @@ caption {
 	height: 1px;
 	background-color: white;
 }
+.condition {
+	width: 720px;
+	margin: 0 auto;
+	padding-bottom: 16px;
+	color: white;
+}
+.condition label {
+	font-size: 16px;
+}
+.box {
+	padding-right: 20px;
+	vertical-align: top;
+	display: inline-block;
+	width: 240px;
+}
 </style>
 </head>
 <body>
-	<div id="search_area">
+	<form id="search_area">
 		<label>Name :</label>
 		<input type="text" class="item">
 		<label>Teacher :</label>
 		<input type="text" class="item">
-		<button type="button" class="btn">Search</button>
+		<input type="submit" class="btn" value="Search">
+	</form>
+	<div class="condition">
+		<span class="box">
+			<label>课程关键字：</label>
+			<label id="inputName">大学大学大学大学大学大学大学大学大学大学大学大学大学大学大学大学大学大学大学大学</label>
+		</span>
+		<span class="box">
+			<label>教师关键字：</label>
+			<label id="inputTeachers">李</label>
+		</span>
 	</div>
 	<div class="divide"></div>
 	<table class="result" cellspacing="0" id="usual">
@@ -200,7 +226,7 @@ caption {
 			<td>徐花</td>
 			<td>100</td>
 			<td>公选</td>
-			<td>NULL</td>
+			<td>备注：本课程为网络课程，上课时间及要求请选上课后及时登录elearning.nju.edu.cn查询)</td>
 		</tr>
 	</table>
 </body>

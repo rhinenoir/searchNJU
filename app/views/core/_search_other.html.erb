@@ -1,24 +1,23 @@
+<caption align="center">其他课程</caption>
 <tr>
 	<th>ID</th>
 	<th>Name</th>
 	<th>Credit</th>
-	<th>Period</th>
 	<th>Area</th>
 	<th>Teachers</th>
-	<th>Acadamy</th>
-	<th>Special</th>
-	<th>Term</th>
+	<th>Limit</th>
+	<th>Type</th>
+	<th>Note</th>
 </tr>
-<% @courses.each do |course| %>
+<% @coursesOther.each do |course| %>
 <tr>
 	<td><%= course.classid %></td>
 	<td><%= course.name %></td>
 	<td><%= course.point %></td>
-	<td><%= course.time %></td>
 	<td><%= course.area %></td>
 	<td><%= course.teacher %></td>
-	<td><%= course.academy %></td>
-	<td><%= course.special %></td>
-	<td><%= course.term %></td>
+	<td><%= course.climit %></td>
+	<td><%= course.ctype %></td>
+	<td><%= course.note %></td>
 </tr>
 <% end %>

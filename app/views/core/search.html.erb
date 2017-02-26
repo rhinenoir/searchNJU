@@ -1,14 +1,24 @@
 <div>
-<%= form_tag('search_ajax', remote: true, id: 'search_form') do %>
-	<%= text_field_tag 'course' %>
-	<%= text_field_tag 'teacher' %>
-	<%= submit_tag 'search' %>
+<%= form_tag('search_ajax', remote: true, id: 'search_area') do %>
+	<%= label_tag 'courseName', 'Name : ' %>
+	<%= text_field_tag 'course', nil, class:'item' %>
+	<%= label_tag 'teacherName', 'Teachers : ' %>
+	<%= text_field_tag 'teacher', nil, class:'item' %>
+	<%= submit_tag 'Search', class: 'btn' %>
 <% end %>
-	<input type="text" class="item">
-	<button type="button" class="btn">className</button>
-	<input type="text" class="item">
-	<button type="button" class="btn">teacherName</button>
-	<table id="result1">
+	<div class="condition">
+		<span class="box">
+			<label>课程关键字：</label>
+			<label id="inputName"></label>
+		</span>
+		<span class="box">
+			<label>教师关键字：</label>
+			<label id="inputTeachers"></label>
+		</span>
+	</div>
+	<div class="divide"></div>
+	<table class="result" cellspacing="0" id="usual">
+	<caption align="center">专业课程</caption>
 		<tr>
 			<th>ID</th>
 			<th>Name</th>
@@ -19,6 +29,20 @@
 			<th>Acadamy</th>
 			<th>Special</th>
 			<th>Term</th>
+		</tr>
+	</table>
+	<div class="divide"></div>
+	<table class="result" cellspacing="0" id="other">
+	<caption align="center">其他课程</caption>
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Credit</th>
+			<th>Area</th>
+			<th>Teachers</th>
+			<th>Limit</th>
+			<th>Type</th>
+			<th>Note</th>
 		</tr>
 	</table>
 </div>
