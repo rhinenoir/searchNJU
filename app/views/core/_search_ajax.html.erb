@@ -1,6 +1,17 @@
+<tr>
+	<th>ID</th>
+	<th>Name</th>
+	<th>Credit</th>
+	<th>Period</th>
+	<th>Area</th>
+	<th>Teachers</th>
+	<th>Acadamy</th>
+	<th>Special</th>
+	<th>Term</th>
+</tr>
 <% @courses.each do |course| %>
 <tr>
-	<td><%= course.id %></td>
+	<td><%= course.classid %></td>
 	<td><%= course.name %></td>
 	<td><%= course.point %></td>
 	<td><%= course.time %></td>

@@ -1,6 +1,5 @@
 class Coursesmain < ActiveRecord::Base
 	belongs_to :Coursesmains, 
 	:class_name => "Coursemain", 
-	:foreign_key => "num"
-
+	:foreign_key => "id"
 end

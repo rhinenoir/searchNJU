@@ -15,18 +15,6 @@ ActiveRecord::Schema.define(version: 0) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "coursesmain", id: false, force: :cascade do |t|
-    t.string  "id",      limit: 10,                          null: false
-    t.string  "name",    limit: 64,                          null: false
-    t.decimal "point",               precision: 3, scale: 1
-    t.integer "time",                                        null: false
-    t.string  "area",    limit: 16,                          null: false
-    t.string  "teacher", limit: 148
-    t.string  "academy", limit: 64,                          null: false
-    t.string  "special", limit: 64,                          null: false
-    t.string  "term",    limit: 1,                           null: false
-  end
-
   create_table "coursesmains", id: false, force: :cascade do |t|
     t.string  "id",      limit: 10,                          null: false
     t.string  "name",    limit: 64,                          null: false

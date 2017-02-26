@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style type="text/css">
+body {
+	background-color: #4A4E8F;
+	font-family: "Microsoft YaHei",sans-serif;
+}
+div {
+	margin: 0 auto;
+	width: 960px;
+	height: auto;
+}
+.result {
+	border: 1px solid white;
+	color: white;
+	text-align: left;
+	width: 960px;
+	margin: 0 auto;
+	margin-bottom: 64px;
+}
+.result tr th,.result tr td {
+	padding-left: 8px;
+	padding-right: 24px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.result tr:hover {
+	background-color: white;
+	color: #4A4E8F;
+}
+.result tr th {
+	border-bottom:solid 1px white;
+	font-family: "Helvetica";
+	height: 32px;
+}
+.result tr td {
+	font-family: "Microsoft YaHei","PMingLiu";
+	height: 30px;
+}
+#search_area {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: white;
+	width: 720px;
+	margin: 0 auto;
+}
+label {
+	padding-right: 4px;
+	font-size: 14px;
+}
+.item {
+	color: white;
+	font-size: 18px;
+	margin-right: 24px;
+	width: 180px;
+	font-family: "Microsoft YaHei","PMingLiu";
+	height: 28px;
+	border-left: none;
+	border-top: none;
+	border-right: none;
+	border-bottom: solid 1px white;
+	text-align: center;
+}
+.btn {
+	font-size: 16px;
+	height: 36px;
+	padding-left: 32px;
+	border: 1px solid white;
+	padding-right: 32px;
+}
+.btn:hover {
+	background-color: white;
+	color: #4A4E8F;
+	cursor: pointer;
+}
+.item, .btn {
+	background-color: transparent;
+	color: white;
+	outline: none;
+}
+caption {
+	padding-bottom: 9px;
+	padding-top: 6px;
+	font-size: 20px;
+	border-left:solid 1px white;
+	border-right:solid 1px white;
+}
+.divide {
+	width: 100%;
+	height: 1px;
+	background-color: white;
+}
+</style>
+</head>
+<body>
+	<div id="search_area">
+		<label>Name :</label>
+		<input type="text" class="item">
+		<label>Teacher :</label>
+		<input type="text" class="item">
+		<button type="button" class="btn">Search</button>
+	</div>
+	<div class="divide"></div>
+	<table class="result" cellspacing="0" id="usual">
+	<caption align="center">专业课程</caption>
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Credit</th>
+			<th>Period</th>
+			<th>Area</th>
+			<th>Teachers</th>
+			<th>Acadamy</th>
+			<th>Special</th>
+			<th>Term</th>
+		</tr>
+		<tr>
+			<td>10060040A</td>
+			<td>中级西班牙语(一)</td>
+			<td>8.0</td>
+			<td>10</td>
+			<td>仙林校区</td>
+			<td>谭薇, 张伟劼</td>
+			<td>外国语学院</td>
+			<td>西班牙语</td>
+			<td>a</td>
+		</tr>
+		<tr>
+			<td>10060040A</td>
+			<td>中级西班牙语(一)</td>
+			<td>8.0</td>
+			<td>10</td>
+			<td>仙林校区</td>
+			<td>谭薇, 张伟劼</td>
+			<td>外国语学院</td>
+			<td>西班牙语</td>
+			<td>a</td>
+		</tr>
+	</table>
+	<div class="divide"></div>
+	<table class="result" cellspacing="0" id="other">
+	<caption align="center">其他课程</caption>
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Credit</th>
+			<th>Area</th>
+			<th>Teachers</th>
+			<th>Limit</th>
+			<th>Type</th>
+			<th>Note</th>
+		</tr>
+		<tr>
+			<td>00370060</td>
+			<td>东京大学“文化表象”</td>
+			<td>2.0</td>
+			<td>仙林校区</td>
+			<td>李斌</td>
+			<td>100</td>
+			<td>通识</td>
+			<td>无</td>
+		</tr>
+		<tr>
+			<td>00370060</td>
+			<td>东京大学“文化表象”</td>
+			<td>2.0</td>
+			<td>仙林校区</td>
+			<td>李斌</td>
+			<td>100</td>
+			<td>通识</td>
+			<td>无</td>
+		</tr>
+		<tr>
+			<td>00370060</td>
+			<td>东京大学“文化表象”</td>
+			<td>2.0</td>
+			<td>仙林校区</td>
+			<td>李斌</td>
+			<td>100</td>
+			<td>通识</td>
+			<td>无</td>
+		</tr>
+		<tr>
+			<td>00370060</td>
+			<td>东京大学“文化表象”</td>
+			<td>2.0</td>
+			<td>仙林校区</td>
+			<td>李斌</td>
+			<td>100</td>
+			<td>通识</td>
+			<td>无</td>
+		</tr>
+		<tr>
+			<td>78001070</td>
+			<td>大学生心理健康学</td>
+			<td>2.0</td>
+			<td>仙林校区</td>
+			<td>徐花</td>
+			<td>100</td>
+			<td>公选</td>
+			<td>NULL</td>
+		</tr>
+	</table>
+</body>
+</html>
