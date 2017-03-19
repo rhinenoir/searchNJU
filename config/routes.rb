@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get '/'
-  
   get 'core/index'
 
   get 'core/search'
