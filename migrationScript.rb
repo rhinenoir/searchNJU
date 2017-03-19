@@ -48,5 +48,5 @@ puts "CoursesOther(MySQL) => Coursesothers(PostgreSQL) migration start!"
 res=client.query("SELECT * from CoursesOther")
 res.each do |row|
     puts "insert: #{row['name']}, #{row['teacher']}"
-    clipre.exec("INSERT INTO Coursesothers(classid,name,point,area,teacher,climit,ctype) VALUES('"+row["id"]+"','"+row["name"]+"',"+row["point"].to_s+","+row["area"]+"','"+row["teacher"]+"','"+row["climit"].to_s+"','"+row["ctype"].to_s+"')")
+    clipre.exec("INSERT INTO Coursesothers(classid,name,point,area,teacher,climit,ctype,note) VALUES('"+row["id"]+"','"+row["name"]+"',"+row["point"].to_s+",'"+row["area"]+"','"+row["teacher"]+"','"+row["climit"].to_s+"','"+row["ctype"].to_s+"','"+row["note"]+"')")
 end
