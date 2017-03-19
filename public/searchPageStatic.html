@@ -14,7 +14,6 @@ div {
 }
 .result {
 	border: 1px solid white;
-	color: white;
 	text-align: left;
 	width: 960px;
 	margin: 0 auto;
@@ -25,14 +24,26 @@ div {
 	padding-right: 24px;
 	padding-top: 2px;
 	padding-bottom: 2px;
+	cursor: pointer;
 }
-.result tr:hover {
-	background-color: white;
+.resultOdd {
+	color: white;
+	background-color: transparent;
+}
+.resultOdd:hover {
+	border-left: solid 1px white;
+}
+.resultEven {
 	color: #4A4E8F;
+	background-color: white;
+}
+.resultEven:hover {
+	border-left: solid 1px #4A4E8F;
 }
 .result tr th {
 	border-bottom:solid 1px white;
 	font-family: "Helvetica";
+	color: white;
 	height: 32px;
 }
 .result tr td {
@@ -86,6 +97,7 @@ caption {
 	padding-top: 6px;
 	font-size: 20px;
 	border-left:solid 1px white;
+	color: white;
 	border-right:solid 1px white;
 }
 .divide {
@@ -142,7 +154,7 @@ caption {
 			<th>Special</th>
 			<th>Term</th>
 		</tr>
-		<tr>
+		<tr class="resultOdd">
 			<td>10060040A</td>
 			<td>中级西班牙语(一)</td>
 			<td>8.0</td>
@@ -153,7 +165,7 @@ caption {
 			<td>西班牙语</td>
 			<td>a</td>
 		</tr>
-		<tr>
+		<tr class="resultEven">
 			<td>10060040A</td>
 			<td>中级西班牙语(一)</td>
 			<td>8.0</td>
@@ -178,7 +190,7 @@ caption {
 			<th>Type</th>
 			<th>Note</th>
 		</tr>
-		<tr>
+		<tr class="resultOdd">
 			<td>00370060</td>
 			<td>东京大学“文化表象”</td>
 			<td>2.0</td>
@@ -188,7 +200,7 @@ caption {
 			<td>通识</td>
 			<td>无</td>
 		</tr>
-		<tr>
+		<tr class="resultEven">
 			<td>00370060</td>
 			<td>东京大学“文化表象”</td>
 			<td>2.0</td>
@@ -198,7 +210,7 @@ caption {
 			<td>通识</td>
 			<td>无</td>
 		</tr>
-		<tr>
+		<tr class="resultOdd">
 			<td>00370060</td>
 			<td>东京大学“文化表象”</td>
 			<td>2.0</td>
@@ -208,7 +220,7 @@ caption {
 			<td>通识</td>
 			<td>无</td>
 		</tr>
-		<tr>
+		<tr class="resultEven">
 			<td>00370060</td>
 			<td>东京大学“文化表象”</td>
 			<td>2.0</td>
@@ -218,7 +230,7 @@ caption {
 			<td>通识</td>
 			<td>无</td>
 		</tr>
-		<tr>
+		<tr class="resultOdd">
 			<td>78001070</td>
 			<td>大学生心理健康学</td>
 			<td>2.0</td>
