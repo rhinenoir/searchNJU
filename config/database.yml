@@ -19,7 +19,7 @@ default: &default
   encoding: unicode
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  pool: <%= ENV["DB_POOL"] || ENV["RAILS_MAX_THREADS"] %>
 
 development:
   <<: *default
@@ -80,6 +80,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
   database: NJUCourses
   username: garen
   password: <%= ENV['TESTPOST_DATABASE_PASSWORD'] %>
