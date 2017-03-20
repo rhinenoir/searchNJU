@@ -19,7 +19,7 @@ default: &default
   encoding: unicode
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
-  pool: <%= ENV["DB_POOL"] || ENV["RAILS_MAX_THREADS"] %>
+  pool: 10
 
 development:
   <<: *default
@@ -79,8 +79,6 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  adapter: postgresql
-  encoding: unicode
-  pool: <%= ENV["DB_POOL"] || ENV["RAILS_MAX_THREADS"] %>
+  <<: *default
   database: postgres://xalotttcvuwyme:401db724e1c222f2900512226a6f75681086fd3c61d902c5ca0aa0b1f1c646b9@ec2-54-221-244-196.compute-1.amazonaws.com:5432/dfso4kh3al1b9f
-  timeout: 5000
+  
