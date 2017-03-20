@@ -81,6 +81,6 @@ test:
 production:
   <<: *default
   url: <%= ENV['DATABASE_URL'] %>
-  database: NJUCourses
+  database: postgres://xalotttcvuwyme:401db724e1c222f2900512226a6f75681086fd3c61d902c5ca0aa0b1f1c646b9@ec2-54-221-244-196.compute-1.amazonaws.com:5432/dfso4kh3al1b9f
   username: garen
   password: <%= ENV['TESTPOST_DATABASE_PASSWORD'] %>
